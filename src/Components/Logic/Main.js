@@ -6,19 +6,19 @@ import useFetch from '../../Hooks/useFetch'
 
 const Main = () => {
 
+    const [userData,setUserData]=useState([]);
     const [userInput,setUserInput]=useState('');
     const fetchURL ='https://api.github.com/users/';
 
-    const [userData,isLoading,hasError]=useFetch(fetchURL,userInput);
-
+    const [isLoading,hasError]=useFetch(fetchURL,userInput,setUserData);
     return (
         <div>
             <Input
                 setUserInput={setUserInput}
             />
-            <Filter/>
+            <Filter userData={userData} setUserData={setUserData}/>
             <hr/>
-            <CardList userData={userData} isLoading={isLoading} hasError={hasError}/>
+            <CardList userData={userData} isLoading={isLoading} hasError={hasError} setUserData={setUserData}/>
         </div>
     )
 }

@@ -3,15 +3,13 @@ import {useState,useEffect} from 'react'
 
 //add error handling for 404 status
 //add cancellation request token
-const useFetch = (fetchURL,userInput) => {
+const useFetch = (fetchURL,userInput,setUserData) => {
 
-
-    const [userData,setUserData]=useState([]);
     const [isLoading,setIsLoading]=useState(true);
     const [hasError,setHasError]=useState(0);
-    let cancelMethod;
-
+    
     useEffect(() => {
+        let cancelMethod;
         if(userInput.length){
             (async ()=>{
                 const result=await axios.get(fetchURL+userInput,{
@@ -36,10 +34,9 @@ const useFetch = (fetchURL,userInput) => {
                 return () => cancelMethod();
             })();
         }
-        return console.log("unmount");
-    }, [fetchURL,userInput,hasError])
+    }, [fetchURL,userInput])
 
-    return [userData,isLoading]
+    return [isLoading,hasError]
 }
 
 export default useFetch
