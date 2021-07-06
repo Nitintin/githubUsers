@@ -4,14 +4,19 @@ const Cards = ({ item,index,handleDelete }) => {
 
     return (
         <div className="userCard" >
-            <a href={item.html_url} >
-                <img src={item.avatar_url} alt="user" width="200" height="200" />
-                <h3>{item.name}</h3>
-                <h4>{item.location}</h4>
-                <h4>{item.followers}</h4>
-            </a>
-            <hr />
-            <button onClick={()=>handleDelete(index)}>delete</button>
+            <div className="upperDiv">
+                <a href={item.html_url} >
+                    <img src={item.avatar_url} alt="user" />
+                    <div className="userDetail">
+                        <h3>{(item.name)? item.name : "NA"}</h3>
+                        <h5><b>Location : </b>{(item.location)? item.location : "NA"}</h5>
+                        <h5><b>Followers : </b>{item.followers}</h5>
+                    </div>
+                </a>
+            </div>
+            <div className="lowerDiv">
+                <button onClick={()=>handleDelete(index)} className="deleteBtn">Delete</button>
+            </div>
         </div>
     )
 }

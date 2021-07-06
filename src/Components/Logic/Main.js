@@ -10,15 +10,27 @@ const Main = () => {
     const [userInput,setUserInput]=useState('');
     const fetchURL ='https://api.github.com/users/';
 
-    const [isLoading,hasError]=useFetch(fetchURL,userInput,setUserData);
+    const [isLoading,hasError]=useFetch(fetchURL,userInput,userData,setUserData);
+
+    const handleFormSubmit=(e,ref)=>{
+        e.preventDefault();
+        setUserInput(ref.current.value);
+    }
     return (
         <div>
             <Input
-                setUserInput={setUserInput}
+                handleFormSubmit={handleFormSubmit}
             />
-            <Filter userData={userData} setUserData={setUserData}/>
-            <hr/>
-            <CardList userData={userData} isLoading={isLoading} hasError={hasError} setUserData={setUserData}/>
+            <Filter 
+                userData={userData} 
+                setUserData={setUserData}
+            />
+            <CardList 
+                userData={userData} 
+                isLoading={isLoading} 
+                hasError={hasError} 
+                setUserData={setUserData}
+            />
         </div>
     )
 }

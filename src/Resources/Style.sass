@@ -3,7 +3,66 @@
     flex-wrap: wrap
     justify-content: center
     
-.userCard
-    border: 1px solid #000
-    width: 20%
-    margin: 2%
+    .userCard
+        border: 1px solid #000
+        width: 20%
+        margin: 2%
+        a
+            text-decoration: none
+            color: #000
+            &:visited
+                color: #000
+            img
+                width: 100%
+            .userDetail
+                text-align: left;
+                height: 125px
+                padding: 0 5%
+                
+        .deleteBtn
+            width: 100%
+            transition: 0.3s
+            background: #FF6666
+            border: none
+            height: 35px
+            &:hover
+                color: #fff
+                transition: 0.3s
+
+.inputContainer
+    input
+        width: 40%
+        height: 25px
+    .addBtn
+        height: 30px
+        background: #99CC99
+        border: none
+        width: 10%
+        border-radius: 2px
+        margin-left: 1%
+        &:hover
+            color: #fff
+            transition: 0.3s
+
+.filterContainer
+    margin-top: 2%
+    display: flex
+    justify-content: center
+    flex-direction: row
+    @media (max-width: 768px)
+        flex-direction: column
+        .filterContent
+            width: 99%
+            margin-top: 2%
+    button
+        height: 30px
+        background: #abd7eb
+        border-radius: 2px
+        border: none
+        margin-left: 1%
+        &:hover
+            color: #fff
+            transition: 0.3s
+
+.cardListError
+    margin-top: 3%

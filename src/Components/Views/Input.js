@@ -1,14 +1,14 @@
 import React,{useRef} from 'react'
 
-const Input = ({setUserInput}) => {
+const Input = ({handleFormSubmit}) => {
 
     const inputRef=useRef(null);
 
     return (
-        <div>
-            <input type="text" placeholder="enter github username" ref={inputRef}/>
-            <button onClick={() => setUserInput(inputRef.current.value)}>Add</button>
-        </div>
+        <form className="inputContainer">
+            <input type="text" placeholder="Enter github username" ref={inputRef} />
+            <button type="submit" className="addBtn" onClick={(e) => handleFormSubmit(e,inputRef)}>Add</button>
+        </form>
     )
 }
 
