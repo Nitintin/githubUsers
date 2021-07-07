@@ -13,6 +13,9 @@ const Cards = ({ item,index,handleDelete }) => {
                         <h5><b>Followers : </b>{item.followers}</h5>
                     </div>
                 </a>
+                <div className="toolTipText">
+                    {item.bio}
+                </div>
             </div>
             <div className="lowerDiv">
                 <button onClick={()=>handleDelete(index)} className="deleteBtn">Delete</button>

@@ -4,23 +4,40 @@
     display: flex
     flex-wrap: wrap
     justify-content: center
-    
+
     .userCard
         border: 1px solid $font-black-color
         width: 20%
         margin: 2%
-        a
-            text-decoration: none
-            color: $font-black-color
-            &:visited
+        .upperDiv
+            position: relative
+            &:hover
+                .toolTipText
+                    visibility: visible
+            a
+                text-decoration: none
                 color: $font-black-color
-            img
-                width: 100%
-            .userDetail
-                text-align: left;
-                height: 125px
-                padding: 0 5%
-                
+                &:visited
+                    color: $font-black-color
+                img
+                    width: 100%
+                .userDetail
+                    text-align: left
+                    height: 125px
+                    padding: 0 5%
+            .toolTipText
+                width: 120px
+                background-color: black
+                color: #fff
+                text-align: center
+                border-radius: 6px
+                padding: 5px 0
+                position: absolute
+                z-index: 1
+                right: -50px
+                top: 100px
+                visibility: hidden
+
         .deleteBtn
             width: 100%
             transition: 0.3s
