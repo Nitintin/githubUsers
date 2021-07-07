@@ -17,14 +17,20 @@ Single responsibilty principle is being used. Logic and views(jsx) are seprated 
 ### node-sass
 ### react functional components
 
-## Fetching Data
+## Different Section of project
+### Fetching Data
 The data is being fetched directly from the API provided by github. You can access the API here - https://api.github.com/users/. To read more about this API please refer to this link - https://developer.github.com/v3/users/
 
-## Sorting Data
+### Sorting Data
 Data is being sorted on the go using array sort methods
 
-## Displaying Data
+### Displaying Data
 Each user is being displayed in a separate card. Flexbox layout is used for these card boxes.
+
+## HOW TO RUN ON LOCAL
+1 Take pull of this github repo
+2 Make sure to run 'npm install' command to install all the dependencies
+3 run npm start
 
 
 ### `yarn start`
