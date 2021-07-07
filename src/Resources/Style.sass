@@ -1,17 +1,19 @@
+@import ./_variable.sass
+
 .userList
     display: flex
     flex-wrap: wrap
     justify-content: center
     
     .userCard
-        border: 1px solid #000
+        border: 1px solid $font-black-color
         width: 20%
         margin: 2%
         a
             text-decoration: none
-            color: #000
+            color: $font-black-color
             &:visited
-                color: #000
+                color: $font-black-color
             img
                 width: 100%
             .userDetail
@@ -22,11 +24,11 @@
         .deleteBtn
             width: 100%
             transition: 0.3s
-            background: #FF6666
+            background: $soft-red
             border: none
             height: 35px
             &:hover
-                color: #fff
+                color: $font-white-color
                 transition: 0.3s
 
 .inputContainer
@@ -35,13 +37,13 @@
         height: 25px
     .addBtn
         height: 30px
-        background: #99CC99
+        background: $soft-green
         border: none
         width: 10%
         border-radius: 2px
         margin-left: 1%
         &:hover
-            color: #fff
+            color: $font-white-color
             transition: 0.3s
 
 .filterContainer
@@ -56,12 +58,12 @@
             margin-top: 2%
     button
         height: 30px
-        background: #abd7eb
+        background: $soft-blue
         border-radius: 2px
         border: none
         margin-left: 1%
         &:hover
-            color: #fff
+            color: $font-white-color
             transition: 0.3s
 
 .cardListError

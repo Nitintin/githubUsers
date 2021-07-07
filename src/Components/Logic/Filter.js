@@ -15,7 +15,7 @@ const Filter = ({userData,setUserData}) => {
                 if (b[buttonClicked]===null){
                     b[buttonClicked]=""
                 }
-                return (a[buttonClicked]<b[buttonClicked]) ? -1 : 1
+                return (a[buttonClicked].toUpperCase()<b[buttonClicked].toUpperCase()) ? -1 : 1
             }));
         }
     }
