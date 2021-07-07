@@ -1,6 +1,21 @@
 # Github User Details
 
 This project was created purely using ReactJS. A user can fetch any user from github using just his username. The portal allows any visitor, to add multiple users, view their details and also sort them according to their name, location and followers. A user can then also reach to each users page by just clicking on indiviual card!
+### Live Website 
+The project has been hosted on a shared netlfiy server. This was done so that you can test it easily on your system, be it desktop or mobile.
+Feel free to check this here - https://github-userdetails.netlify.app/
+
+## Design Principles
+ ### DRY - do not repeat yourself
+ I have made sure to made components as modular as possible so that duplicate and verbose code can be removed
+### SRP - single responsibilty principle
+Single responsibilty principle is being used. Logic and views(jsx) are seprated so that debuggin becomes easy and code is alot more modular
+
+## Technologies Used
+
+### custom hooks
+### node-sass
+### react functional components
 
 ## Fetching Data
 The data is being fetched directly from the API provided by github. You can access the API here - https://api.github.com/users/. To read more about this API please refer to this link - https://developer.github.com/v3/users/
@@ -20,32 +35,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
