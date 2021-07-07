@@ -1,10 +1,16 @@
-# Getting Started with Create React App
+# Github User Details
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created purely using ReactJS. A user can fetch any user from github using just his username. The portal allows any visitor, to add multiple users, view their details and also sort them according to their name, location and followers. A user can then also reach to each users page by just clicking on indiviual card!
 
-## Available Scripts
+## Fetching Data
+The data is being fetched directly from the API provided by github. You can access the API here - https://api.github.com/users/. To read more about this API please refer to this link - https://developer.github.com/v3/users/
 
-In the project directory, you can run:
+## Sorting Data
+Data is being sorted on the go using array sort methods
+
+## Displaying Data
+Each user is being displayed in a separate card. Flexbox layout is used for these card boxes.
+
 
 ### `yarn start`
 
