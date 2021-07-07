@@ -1,10 +1,9 @@
 import React from 'react'
-import Cards from '../Views/Cards'
+import ShowCards from '../Views/ShowCards'
 
 const CardList = ({ userData, isLoading, hasError, setUserData }) => {
 
     const handleDelete = (index) => {
-        //setUserData(userData.splice(index,1));
         let tempData = userData.slice(0);
         tempData.splice(index, 1);
         setUserData(tempData)
@@ -19,7 +18,7 @@ const CardList = ({ userData, isLoading, hasError, setUserData }) => {
                     <div className="userList">
                         {
                             userData.map((item, index) => (
-                                <Cards
+                                <ShowCards
                                     key={item.login}
                                     item={item}
                                     index={index}
@@ -34,7 +33,13 @@ const CardList = ({ userData, isLoading, hasError, setUserData }) => {
             return <div className="cardListError">Loading....</div>
         }
     } else {
-        return <div className="cardListError">Add some users!</div>
+        return (
+            <>
+                {(hasError === 404) ? <div className="cardListError">This doesnt seem a valid username..</div> : ''}
+                {(hasError === 403) ? <div className="cardListError">Woah! you have fetched enough for the day buddy</div> : ''}
+                <div className="cardListError">Add some users!</div>
+            </>
+        )
     }
 }
 
